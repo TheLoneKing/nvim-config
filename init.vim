@@ -8,7 +8,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'scrooloose/nerdcommenter' " Toggle comment/uncomment
     Plug 'airblade/vim-gitgutter'   " Denotes changes in the file
-	Plug 'google/vim-searchindex'   " Displays match count while searching
+    Plug 'google/vim-searchindex'   " Displays match count while searching
     Plug 'vim-airline/vim-airline'
     Plug 'tpope/vim-fugitive'
 " Syntax
