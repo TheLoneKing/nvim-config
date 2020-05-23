@@ -16,7 +16,6 @@ call plug#begin('~/.config/nvim/plugged')
     " vim-devicons plugin may need additional fonts to work properly.
     " Skip this plugin if not needed. This is just a cosmetic plugin.
     Plug 'ryanoasis/vim-devicons'
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
 " General Settings
@@ -29,7 +28,6 @@ set backspace=indent,eol,start confirm
 set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab  
 set hls is ic
 set laststatus=2 cmdheight=1
-au BufRead,BufNewFile *.fountain set filetype=fountain
 set splitbelow splitright 
 set nobackup nowritebackup
 set relativenumber  " Set line numbers relative to current line
@@ -52,12 +50,8 @@ set statusline+=\ [%c]  " Indicate the column
 
 " Key-bindings
 let mapleader=" "
-nnoremap <leader><Space> :EditVifm .<CR>
 nnoremap <leader>g :GitGutterDisable <BAR> :set laststatus=0 <CR>
-nnoremap <leader>ps :Rg<SPACE>
-" Opens a new tab with the same file and enters into ctrlp to search and open
-" a new file in the newly opened tab
-nnoremap <leader>n :wincmd v<CR>:CtrlP<CR>
+nnoremap <leader>ps :Rg<SPACE>  " Search for text recursively from working directory
 " Reload nvim config
 nnoremap <C-s> :source ~/.config/nvim/init.vim<CR>
 
