@@ -72,6 +72,7 @@ nnoremap <leader>j <C-W>j
 nnoremap <leader>k <C-W>k
 nnoremap <leader>l <C-W>l
 
+" NerdTree Key Bindings
 nmap <C-n> :NERDTreeToggle<CR>
 vmap <leader>\ <plug>NERDCommenterToggle
 nmap <leader>\ <plug>NERDCommenterToggle
