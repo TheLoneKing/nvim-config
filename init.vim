@@ -1,23 +1,24 @@
 " Plug-ins
 call plug#begin('~/.config/nvim/plugged')
 " Tools
-    Plug 'vifm/vifm.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'jremmen/vim-ripgrep'
+    Plug 'jremmen/vim-ripgrep'  " Searches the files recursively for given text
     Plug 'scrooloose/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    Plug 'scrooloose/nerdcommenter'
+    Plug 'scrooloose/nerdcommenter' " Toggle comment/uncomment
+    Plug 'airblade/vim-gitgutter'   " Denotes changes in the file
+	Plug 'google/vim-searchindex'   " Displays match count while searching
 " Syntax
-    Plug 'tpope/vim-markdown'
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
-    Plug 'vim-scripts/fountain.vim'
-" Color-scheme
+" Color-scheme / Theme
     Plug 'morhetz/gruvbox'
+    " vim-devicons plugin may need additional fonts to work properly.
+    " Skip this plugin if not needed. This is just a cosmetic plugin.
     Plug 'ryanoasis/vim-devicons'
-call plug#end() 
- 
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+call plug#end()
+
 " General Settings
 set encoding=UTF-8
 filetype plugin indent on  "Enabling Plugin & Indent
@@ -34,6 +35,7 @@ set nobackup nowritebackup
 set relativenumber  " Set line numbers relative to current line
 set colorcolumn=100
 set nowrap          " Do not wrap overflowing line
+set guifont=JetBrains\ Mono\ Regular\ 13
 
 " Status-line
 set statusline=
@@ -46,15 +48,16 @@ set statusline+=\ %F    " Indicate the full path of current file
 set statusline+=%= "Right side settings
 set statusline+=%#Search#
 set statusline+=\ %l/%L " Indicate current line / total lines
-set statusline+=\ [%c]
+set statusline+=\ [%c]  " Indicate the column
 
 " Key-bindings
 let mapleader=" "
 nnoremap <leader><Space> :EditVifm .<CR>
-"nnoremap <leader>n :CtrlP<CR>
-nnoremap <leader>, :vsplit ~/.config/nvim/init.vim<CR>
 nnoremap <leader>g :GitGutterDisable <BAR> :set laststatus=0 <CR>
 nnoremap <leader>ps :Rg<SPACE>
+" Opens a new tab with the same file and enters into ctrlp to search and open
+" a new file in the newly opened tab
+nnoremap <leader>n :wincmd v<CR>:CtrlP<CR>
 " Reload nvim config
 nnoremap <C-s> :source ~/.config/nvim/init.vim<CR>
 
@@ -75,6 +78,18 @@ nnoremap <leader>j <C-W>j
 nnoremap <leader>k <C-W>k
 nnoremap <leader>l <C-W>l
 
+nmap <C-n> :NERDTreeToggle<CR>
+vmap <leader>\ <plug>NERDCommenterToggle
+nmap <leader>\ <plug>NERDCommenterToggle
+
+" Highlight current file in NerdTree
+nnoremap <leader>f :NERDTreeFind<CR>
+
+" GitGutter Keymaps
+nmap <leader>gg :GitGutterToggle
+nmap <leader>gs :GitGutterSignsToggle
+nmap <leader>gh :GitGutterLineHighlightsToggle
+
 " Color Settings
 color gruvbox
 set background=dark termguicolors cursorline
@@ -93,12 +108,10 @@ if executable('rg')
 endif
 
 " NerdTree Settings
-nmap <C-n> :NERDTreeToggle<CR>
-vmap <leader>\ <plug>NERDCommenterToggle
-nmap <leader>\ <plug>NERDCommenterToggle
 let g:NERDTreeRespectWildIgnore = 1
 let g:NERDTreeIgnore = ['^node_modules$', '.*\.iml', '^target$']
 
-" Find current file in NerdTree
-nnoremap <leader>n :NERDTreeFind<CR>
+" If GitGutter causes lag, uncomment the two lines below
+" let g:gitgutter_realtime = 0
+" let g:gitgutter_eager = 0
 
