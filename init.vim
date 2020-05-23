@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'airblade/vim-gitgutter'   " Denotes changes in the file
 	Plug 'google/vim-searchindex'   " Displays match count while searching
     Plug 'vim-airline/vim-airline'
+    Plug 'tpope/vim-fugitive'
 " Syntax
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
 " Color-scheme / Theme
@@ -73,6 +74,12 @@ nnoremap <leader>f :NERDTreeFind<CR>
 nmap <leader>gg :GitGutterToggle
 nmap <leader>gs :GitGutterSignsToggle
 nmap <leader>gh :GitGutterLineHighlightsToggle
+
+" Git (fugitive) Key Bindings
+nnoremap gs :Gstatus<CR>
+nnoremap gc :Gcommit<CR>
+nnoremap gp :Gpush<CR>
+nnoremap gl :winc S<CR>:Glog<CR><C-W>j:resize -6<CR>
 
 " Color Settings
 color gruvbox
