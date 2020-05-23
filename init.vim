@@ -9,6 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'scrooloose/nerdcommenter' " Toggle comment/uncomment
     Plug 'airblade/vim-gitgutter'   " Denotes changes in the file
 	Plug 'google/vim-searchindex'   " Displays match count while searching
+    Plug 'vim-airline/vim-airline'
 " Syntax
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
 " Color-scheme / Theme
@@ -16,6 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
     " vim-devicons plugin may need additional fonts to work properly.
     " Skip this plugin if not needed. This is just a cosmetic plugin.
     Plug 'ryanoasis/vim-devicons'
+    Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " General Settings
@@ -34,19 +36,6 @@ set relativenumber  " Set line numbers relative to current line
 set colorcolumn=100
 set nowrap          " Do not wrap overflowing line
 set guifont=JetBrains\ Mono\ Regular\ 13
-
-" Status-line
-set statusline=
-set statusline+=%#IncSearch#
-set statusline+=\ %M    " Indicate if the file has changed with a '+' on bottom left of statusline
-set statusline+=\ %y    " Indicate the current filetype
-set statusline+=\ %r    " Indicate if the file is opened in Read-Only mode
-set statusline+=%#CursorLineNr#
-set statusline+=\ %F    " Indicate the full path of current file
-set statusline+=%= "Right side settings
-set statusline+=%#Search#
-set statusline+=\ %l/%L " Indicate current line / total lines
-set statusline+=\ [%c]  " Indicate the column
 
 " Key-bindings
 let mapleader=" "
@@ -88,6 +77,7 @@ nmap <leader>gh :GitGutterLineHighlightsToggle
 " Color Settings
 color gruvbox
 set background=dark termguicolors cursorline
+let g:airline_theme='minimalist'
 
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
