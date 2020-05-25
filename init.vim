@@ -37,6 +37,8 @@ set relativenumber  " Set line numbers relative to current line
 set colorcolumn=100
 set nowrap          " Do not wrap overflowing line
 set guifont=JetBrains\ Mono\ Regular\ 13
+set t_Co=256
+set t_ut=
 
 " Key-bindings
 let mapleader=" "
@@ -82,9 +84,9 @@ nnoremap gp :Gpush<CR>
 nnoremap gl :winc S<CR>:Glog<CR><C-W>j:resize -6<CR>
 
 " Color Settings
-color gruvbox
-set background=dark termguicolors cursorline
+colorscheme gruvbox
 let g:airline_theme='minimalist'
+set background=dark termguicolors cursorline
 
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
