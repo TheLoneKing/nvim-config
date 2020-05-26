@@ -28,10 +28,10 @@ syntax on  "Turning Syntax on
 set autoread wildmode=longest,list,full
 set spell spelllang=en_us
 set backspace=indent,eol,start confirm
-set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab  
+set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab
 set hls is ic
 set laststatus=2 cmdheight=1
-set splitbelow splitright 
+set splitbelow splitright
 set nobackup nowritebackup
 set relativenumber  " Set line numbers relative to current line
 set colorcolumn=100
@@ -47,7 +47,7 @@ nnoremap <leader>ps :Rg<SPACE>  " Search for text recursively from working direc
 " Reload nvim config
 nnoremap <C-s> :source ~/.config/nvim/init.vim<CR>
 
-nnoremap <Up> :resize +2<CR> 
+nnoremap <Up> :resize +2<CR>
 nnoremap <Down> :resize -2<CR>
 nnoremap <Left> :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
