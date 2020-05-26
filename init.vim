@@ -11,8 +11,11 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'google/vim-searchindex'   " Displays match count while searching
     Plug 'vim-airline/vim-airline'
     Plug 'tpope/vim-fugitive'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
 " Syntax
-    Plug 'ap/vim-css-color' "Displays a preview of colors with CSS 
+    Plug 'ap/vim-css-color' "Displays a preview of colors with CSS
 " Color-scheme / Theme
     Plug 'morhetz/gruvbox'
     " vim-devicons plugin may need additional fonts to work properly.
@@ -36,6 +39,7 @@ set nobackup nowritebackup
 set relativenumber  " Set line numbers relative to current line
 set colorcolumn=100
 set nowrap          " Do not wrap overflowing line
+au BufRead,BufNewFile *.md set colorcolumn=0 wrap nolist linebreak
 set guifont=JetBrains\ Mono\ Regular\ 13
 set t_Co=256
 set t_ut=
@@ -104,6 +108,16 @@ endif
 " NerdTree Settings
 let g:NERDTreeRespectWildIgnore = 1
 let g:NERDTreeIgnore = ['^node_modules$', '.*\.iml', '^target$']
+
+" Markdown Snippets Settings
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<C-f>"
+let g:UltiSnipsJumpBackwardTrigger="<C-b>"
+
+" Markdown Preview Settings
+let g:mkdp_refresh_slow = 1	" Refresh markdown when buffer is saved / leaving insert mode
+let g:mkdp_auto_start = 1
+let g:mkdp_page_title = '${name}'
 
 " If GitGutter causes lag, uncomment the two lines below
 " let g:gitgutter_realtime = 0
