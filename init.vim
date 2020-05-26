@@ -109,6 +109,10 @@ endif
 let g:NERDTreeRespectWildIgnore = 1
 let g:NERDTreeIgnore = ['^node_modules$', '.*\.iml', '^target$']
 
+" airline Settings
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
 " Markdown Snippets Settings
 let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<C-f>"
