@@ -87,6 +87,10 @@ nnoremap gc :Gcommit<CR>
 nnoremap gp :Gpush<CR>
 nnoremap gl :winc S<CR>:Glog<CR><C-W>j:resize -6<CR>
 
+" Key-binding to switch buffers
+nmap <leader>] :bn<CR>
+nmap <leader>[ :bp<CR>
+
 " Color Settings
 colorscheme gruvbox
 let g:airline_theme='minimalist'
