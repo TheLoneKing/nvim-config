@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'honza/vim-snippets'
 " Syntax
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS
+    Plug 'uiiaoo/java-syntax.vim'
 " Color-scheme / Theme
     Plug 'morhetz/gruvbox'
     " vim-devicons plugin may need additional fonts to work properly.
@@ -43,6 +44,9 @@ au BufRead,BufNewFile *.md set colorcolumn=0 wrap nolist linebreak
 set guifont=JetBrains\ Mono\ Regular\ 13
 set t_Co=256
 set t_ut=
+
+" Java Settings
+autocmd Filetype java set nospell
 
 " Key-bindings
 let mapleader=" "
