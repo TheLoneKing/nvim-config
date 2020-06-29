@@ -72,6 +72,12 @@ nnoremap <leader>j <C-W>j
 nnoremap <leader>k <C-W>k
 nnoremap <leader>l <C-W>l
 
+" Copy & Paste using system clipboard
+nnoremap <leader>y "*y
+nnoremap <leader>p "*p
+nnoremap <leader>Y "+y
+nnoremap <leader>P "+p
+
 " NerdTree Key Bindings
 nmap <C-n> :NERDTreeToggle<CR>
 vmap <leader>\ <plug>NERDCommenterToggle
