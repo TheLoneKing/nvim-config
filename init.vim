@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Syntax
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS
     Plug 'uiiaoo/java-syntax.vim'
+    Plug 'HerringtonDarkholme/yats.vim' " Typescript syntax highlight
 " Color-scheme / Theme
     Plug 'morhetz/gruvbox'
     " vim-devicons plugin may need additional fonts to work properly.
@@ -51,7 +52,8 @@ autocmd Filetype java set nospell
 " Key-bindings
 let mapleader=" "
 nnoremap <leader>g :GitGutterDisable <BAR> :set laststatus=0 <CR>
-nnoremap <leader>ps :Rg<SPACE>  " Search for text recursively from working directory
+" Search for text recursively from working directory
+nnoremap <leader>ps :Rg<SPACE>
 " Reload nvim config
 nnoremap <C-s> :source ~/.config/nvim/init.vim<CR>
 
@@ -84,7 +86,7 @@ vmap <leader>\ <plug>NERDCommenterToggle
 nmap <leader>\ <plug>NERDCommenterToggle
 
 " Highlight current file in NerdTree
-nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <leader>n :NERDTreeFind<CR>
 
 " GitGutter Keymaps
 nmap <leader>gg :GitGutterToggle
@@ -128,7 +130,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " Markdown Snippets Settings
-let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsExpandTrigger="<C-l>"
 let g:UltiSnipsJumpForwardTrigger="<C-f>"
 let g:UltiSnipsJumpBackwardTrigger="<C-b>"
 
