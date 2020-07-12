@@ -34,11 +34,12 @@ set autoread wildmode=longest,list,full
 set spell spelllang=en_us
 set backspace=indent,eol,start confirm
 set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab
+set smartcase
 set hls is ic
 set laststatus=2 cmdheight=1
 set splitbelow splitright
 set nobackup nowritebackup
-set relativenumber  " Set line numbers relative to current line
+set relativenumber number  " Set line numbers relative to current line
 set colorcolumn=100
 set nowrap          " Do not wrap overflowing line
 au BufRead,BufNewFile *.md set colorcolumn=0 wrap nolist linebreak
@@ -51,11 +52,13 @@ autocmd Filetype java set nospell
 
 " Key-bindings
 let mapleader=" "
+
+nmap <silent> ./ :noh<CR>
 nnoremap <leader>g :GitGutterDisable <BAR> :set laststatus=0 <CR>
 " Search for text recursively from working directory
 nnoremap <leader>ps :Rg<SPACE>
 " Reload nvim config
-nnoremap <C-s> :source ~/.config/nvim/init.vim<CR>
+" nnoremap <C-s> :source ~/.config/nvim/init.vim<CR>
 
 nnoremap <Up> :resize +2<CR>
 nnoremap <Down> :resize -2<CR>
