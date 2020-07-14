@@ -53,7 +53,7 @@ autocmd Filetype java set nospell
 " Key-bindings
 let mapleader=" "
 
-nmap <silent> ./ :noh<CR>
+nnoremap <silent> ./ :noh<CR>
 nnoremap <leader>g :GitGutterDisable <BAR> :set laststatus=0 <CR>
 " Search for text recursively from working directory
 nnoremap <leader>ps :Rg<SPACE>
@@ -107,12 +107,17 @@ nmap <leader>] :bn<CR>
 nmap <leader>[ :bp<CR>
 
 " Color Settings
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_invert_selection='0'
+
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
 colorscheme gruvbox
 let g:airline_theme='minimalist'
 set background=dark termguicolors cursorline
-
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
 " CtrlP Settings
 let g:ctrlp_use_caching = 0
