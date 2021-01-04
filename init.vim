@@ -38,6 +38,7 @@ set smartcase
 set hls is ic
 set laststatus=2 cmdheight=1
 set splitbelow splitright
+set noswapfile
 set nobackup nowritebackup
 set relativenumber number  " Set line numbers relative to current line
 set colorcolumn=100
@@ -144,8 +145,11 @@ let g:UltiSnipsJumpBackwardTrigger="<C-b>"
 
 " Markdown Preview Settings
 let g:mkdp_refresh_slow = 1	" Refresh markdown when buffer is saved / leaving insert mode
-let g:mkdp_auto_start = 1
+let g:mkdp_auto_start = 0
+let g:mkdp_auto_close = 0
 let g:mkdp_page_title = '${name}'
+
+nnoremap <M-m> :MarkdownPreview<CR>
 
 " If GitGutter causes lag, uncomment the two lines below
 " let g:gitgutter_realtime = 0
