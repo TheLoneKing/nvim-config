@@ -315,3 +315,5 @@ nnoremap <silent><nowait> \k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> \p  :<C-u>CocListResume<CR>
 
+" Remove this after updating nvim
+let g:coc_disable_startup_warning = 1
