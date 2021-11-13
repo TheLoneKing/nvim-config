@@ -47,6 +47,7 @@ au BufRead,BufNewFile *.md set colorcolumn=0 wrap nolist linebreak
 set guifont=JetBrains\ Mono\ Regular\ 13
 set t_Co=256
 set t_ut=
+set wildignore+=target/*,dist/*,.settings/*,.idea/*,node_modules/*,*.swp,*.iml    " Ignore these files
 
 " Java Settings
 autocmd Filetype java set nospell
