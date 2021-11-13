@@ -55,6 +55,11 @@ autocmd Filetype java set nospell
 " Key-bindings
 let mapleader=" "
 
+" Auto-close brackets
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap {<CR> {<CR>}<C-o>O
+
 nnoremap <silent> ./ :noh<CR>
 nnoremap <leader>g :GitGutterDisable <BAR> :set laststatus=0 <CR>
 " Search for text recursively from working directory
