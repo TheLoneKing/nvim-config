@@ -1,0 +1,43 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
+    "java",
+    "javascript",
+    "json",
+    "python",
+    "sh",
+    "sql",
+    "yaml",
+    "typescript",
+    "xml"
+  ],
+  "codeLens.enable": true,
+  "yaml.format.enable": true,
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.import.maven.enabled": true,
+  "java.configuration.maven.userSettings": "~/.m2/settings.xml",
+  "java.maven.downloadSources": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.implementationsCodeLens.enabled": true,
+  "java.signatureHelp.enabled": true,
+  "java.completion.overwrite": true,
+  "java.completion.guessMethodArguments": true,
+  "java.completion.favoriteStaticMembers": ["java.util.stream.Collectors.*"],
+  "java.completion.importOrder": ["", "javax", "java", "#"],
+  "java.progressReports.enabled": true,
+  "java.format.enabled": true,
+  "java.format.onType.enabled": true,
+  "java.format.comments.enabled": false,
+  "java.foldingRange.enabled": true,
+  "java.saveActions.organizeImports": true,
+  "java.selectionRange.enabled": true,
+  "java.project.resourceFilters": [
+    "node_modules",
+    ".git",
+    ".idea",
+    ".settings"
+  ],
+  "python.pythonPath": "/usr/bin/python3",
+  "python.autoComplete.addBrackets": true
+}
