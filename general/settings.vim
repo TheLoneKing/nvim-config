@@ -7,7 +7,17 @@ set encoding=UTF-8
 filetype plugin indent on
 
 " Enable syntax highlighting
-syntax on
+syntax enable
+
+" Enable filetype plugin
+filetype plugin on
+
+" Search down into sub-folders.
+" Provides tab-completion for all file related tasks
+set path+=**
+
+" Display all matching files for tab complete
+set wildmenu
 
 set autoread wildmode=longest,list,full
 
@@ -54,7 +64,7 @@ set t_Co=256
 set t_ut=
 
 " Ignore these files and folders
-set wildignore+=target/*,dist/*,.settings/*,.idea/*,node_modules/*,*.swp,*.iml    " Ignore these files
+set wildignore+=**/target/*,**/dist/*,**/.settings/*,**/.idea/*,**/node_modules/*,*.swp,*.iml    " Ignore these files
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.

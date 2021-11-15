@@ -40,7 +40,7 @@ source ~/.config/nvim/nerdcommenter/nerdcommenter.vim
 source ~/.config/nvim/ctrlp/ctrlp.vim
 source ~/.config/nvim/git/gitgutter.vim
 source ~/.config/nvim/git/fugitive.vim
-source ~/.config/nvim/snippets/ultisnips.vim
+source ~/.config/nvim/snippet/ultisnips.vim
 source ~/.config/nvim/coc/coc.vim
 source ~/.config/nvim/coc/extensions.vim
 source ~/.config/nvim/vimspector/vimspector.vim

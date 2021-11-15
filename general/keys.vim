@@ -9,11 +9,6 @@ nmap <leader>s :w<CR>
 " Reload neovim config
 nmap <C-M-s> :source ~/.config/nvim/init.vim<CR>
 
-" Auto-close brackets
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap {<CR> {<CR>}<C-o>O
-
 " More handy insert mode exit
 inoremap jk <Esc>
 inoremap kj <Esc>
@@ -25,11 +20,11 @@ nnoremap <leader><ESC> :noh<CR>
 nnoremap <leader>ps :Rg<SPACE>
 
 " Key-binding to switch buffers
-nmap <TAB> :bn<CR>
-nmap <S-TAB> :bp<CR>
+nnoremap <TAB> :bn<CR>
+nnoremap <S-TAB> :bp<CR>
 
 " Close the current buffer
-nmap <leader>bd :bd<CR>
+nnoremap <leader>bd :bd<CR>
 
 " Resize buffers
 nnoremap <Up> :resize +2<CR>
@@ -64,4 +59,9 @@ tnoremap <M-j> <C-\><C-N><C-w>j
 tnoremap <M-k> <C-\><C-N><C-w>k
 tnoremap <M-l> <C-\><C-N><C-w>l
 nnoremap <M-t> :vsplit term://bash<CR>
+
+" Auto-close brackets
+autocmd FileType java,js,ts inoremap <buffer> ( ()<left>
+autocmd FileType java,js,ts inoremap <buffer> [ []<left>
+autocmd FileType java,js,ts inoremap <buffer> {<CR> {<CR>}<C-o>O
 
