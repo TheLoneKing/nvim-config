@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'airblade/vim-gitgutter'   " Denotes changes in the file
     Plug 'tpope/vim-fugitive'
     Plug 'puremourning/vimspector'
+    Plug 'sotte/presenting.vim'
 " Syntax
     Plug 'ap/vim-css-color' "Displays a preview of colors with CSS
     Plug 'uiiaoo/java-syntax.vim'
