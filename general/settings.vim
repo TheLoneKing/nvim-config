@@ -102,3 +102,5 @@ let g:python3_host_prog = "/usr/bin/python3"
 " Python 2 path
 let g:python_host_prog = "/usr/bin/python2"
 
+" Disable markdown syntax conceal
+let g:markdown_syntax_conceal = 0
