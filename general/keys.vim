@@ -13,6 +13,9 @@ nmap <C-M-s> :source ~/.config/nvim/init.vim<CR>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
+" Append ; at the end of the line
+nnoremap ;; g_a;<ESC>
+
 " Remove text highlights
 nnoremap <leader><ESC> :noh<CR>
 
