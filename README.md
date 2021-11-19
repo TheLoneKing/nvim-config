@@ -23,20 +23,18 @@ Open the `init.vim` file and run `:PlugInstall` command to install all the plugi
 
 ## Coc Extensions
 This configuration has the following CoC extensions enabled:
-<ul>
-    <li>coc-css</li>
-    <li>coc-eslint</li>
-    <li>coc-html</li>
-    <li>coc-java</li>
-    <li>coc-json</li>
-    <li>coc-pyright</li>
-    <li>coc-python</li>
-    <li>coc-sh</li>
-    <li>coc-sql</li>
-    <li>coc-tsserver</li>
-    <li>coc-yaml</li>
-    <li>coc-xml</li>
-</ul>
+* coc-css
+* coc-eslint
+* coc-html
+* coc-java
+* coc-json
+* coc-pyright
+* coc-python
+* coc-sh
+* coc-sql
+* coc-tsserver
+* coc-yaml
+* coc-xml
 
 Once the plugins are installed, install the coc extensions with the below command:
 ```viml
