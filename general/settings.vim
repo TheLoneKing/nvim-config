@@ -62,6 +62,7 @@ set guifont=JetBrains\ Mono\ Regular\ 13
 " Terminal color config
 set t_Co=256
 set t_ut=
+set termguicolors
 
 " Ignore these files and folders
 set wildignore+=**/target/*,**/dist/*,**/.settings/*,**/.idea/*,**/node_modules/*,*.swp,*.iml    " Ignore these files
