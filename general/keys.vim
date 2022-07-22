@@ -12,6 +12,8 @@ nmap <C-M-s> :source ~/.config/nvim/init.vim<CR>
 " More handy insert mode exit
 inoremap jk <Esc>
 inoremap kj <Esc>
+inoremap jj <Esc>
+inoremap kk <Esc>
 
 " Append ; at the end of the line
 nnoremap ;; g_a;<ESC>
@@ -64,7 +66,7 @@ tnoremap <M-l> <C-\><C-N><C-w>l
 nnoremap <M-t> :vsplit term://bash<CR>
 
 " Auto-close brackets
-autocmd FileType java,js,ts inoremap <buffer> ( ()<left>
-autocmd FileType java,js,ts inoremap <buffer> [ []<left>
-autocmd FileType java,js,ts inoremap <buffer> {<CR> {<CR>}<C-o>O
+autocmd FileType java,js,ts,py inoremap <buffer> ( ()<left>
+autocmd FileType java,js,ts,py inoremap <buffer> [ []<left>
+autocmd FileType java,js,ts,py inoremap <buffer> {<CR> {<CR>}<C-o>O
 

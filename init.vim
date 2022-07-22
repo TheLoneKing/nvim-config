@@ -51,7 +51,3 @@ source ~/.config/nvim/airline/airline.vim
 " Set color scheme
 colorscheme gruvbox
 set background=dark
-
-" Custom key-bindings
-inoremap jj <Esc>
-inoremap kk <Esc>
