@@ -6,7 +6,6 @@ let g:coc_global_extensions = [
       \ 'coc-java',
       \ 'coc-json',
       \ 'coc-pyright',
-      \ 'coc-python',
       \ 'coc-sh',
       \ 'coc-sql',
       \ 'coc-tsserver',
