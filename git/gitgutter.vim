@@ -13,7 +13,8 @@ nmap <leader>gs :GitGutterSignsToggle<CR>
 nmap <leader>gh :GitGutterLineHighlightsToggle<CR>
 
 " Undo current change
-nmap <leader>guh :GitGutterUndoHunk<CR>
+nmap <leader>ghu :GitGutterUndoHunk<CR>
+nmap <leader>ghs :GitGutterStageHunk<CR>
 
 " If GitGutter causes lag, uncomment the two lines below
 " let g:gitgutter_realtime = 0
