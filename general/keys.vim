@@ -66,7 +66,7 @@ tnoremap <M-l> <C-\><C-N><C-w>l
 nnoremap <M-t> :vsplit term://bash<CR>
 
 " Auto-close brackets
-autocmd FileType java,js,ts,py inoremap <buffer> ( ()<left>
-autocmd FileType java,js,ts,py inoremap <buffer> [ []<left>
+" autocmd FileType java,js,ts,py inoremap <buffer> ( ()<left>
+" autocmd FileType java,js,ts,py inoremap <buffer> [ []<left>
 autocmd FileType java,js,ts,py inoremap <buffer> {<CR> {<CR>}<C-o>O
 
