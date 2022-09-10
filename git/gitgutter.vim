@@ -1,7 +1,7 @@
 " GitGutter Keymaps
 
 " Disable gitgutter
-nnoremap <leader>g :GitGutterDisable <BAR> :set laststatus=0 <CR>
+" nnoremap <leader>g :GitGutterDisable<CR>
 
 " Toggle gitgutter
 nmap <leader>gg :GitGutterToggle<CR>
