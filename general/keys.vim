@@ -46,16 +46,20 @@ xnoremap <M-j> :move '>+1<CR>gv-gv
 nnoremap Q <nop>
 
 " Move through the buffers
-nnoremap <leader>h <C-W>h
-nnoremap <leader>j <C-W>j
-nnoremap <leader>k <C-W>k
-nnoremap <leader>l <C-W>l
+nnoremap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
 
 " Copy & Paste using system clipboard
 nnoremap <leader>y "*y
 nnoremap <leader>p "*p
 nnoremap <leader>Y "+y
 nnoremap <leader>P "+p
+
+" Better indenting (indents and selects the block again)
+vnoremap < <gv
+vnoremap > >gv
 
 " Terminal key mappings
 tnoremap <Esc> <C-\><C-n>
@@ -69,4 +73,7 @@ nnoremap <M-t> :vsplit term://bash<CR>
 " autocmd FileType java,js,ts,py inoremap <buffer> ( ()<left>
 " autocmd FileType java,js,ts,py inoremap <buffer> [ []<left>
 autocmd FileType java,js,ts,py inoremap <buffer> {<CR> {<CR>}<C-o>O
+
+" Automatically remove trailing whitespaces before saving files
+autocmd BufWritePre * %s/\s\+$//e
 
