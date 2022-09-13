@@ -51,10 +51,10 @@ return packer.startup(function(use)
     'luisiacc/gruvbox-baby', branch = 'main'
   }
   use {
-    'nvim-lualine/lualine.nvim',
+    'nvim-lualine/lualine.nvim',-- Lualine (Bottom status line)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  use {                          -- Bufferline (Tabline)
+  use {                         -- Bufferline (Tabline)
     'akinsho/bufferline.nvim',
     tag = "v2.*",
     requires = 'kyazdani42/nvim-web-devicons'
