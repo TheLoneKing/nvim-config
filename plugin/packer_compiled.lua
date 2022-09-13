@@ -74,6 +74,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  gruvbox = {
+    loaded = true,
+    path = "/home/theloneking/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
+  },
+  ["gruvbox-baby"] = {
+    loaded = true,
+    path = "/home/theloneking/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
+    url = "https://github.com/luisiacc/gruvbox-baby"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/theloneking/.local/share/nvim/site/pack/packer/start/lualine.nvim",

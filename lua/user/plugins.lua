@@ -44,12 +44,24 @@ return packer.startup(function(use)
 	-- My plugins here
 	
 	use 'wbthomason/packer.nvim'	-- Have packer manage itself
-	use 'nvim-lua/plenary.nvim'	-- Useful Lua functions used by a lot of plugins
-	use 'nvim-lua/popup.nvim'	-- An implementation of the Popup API from vim in Neovim.
+	use 'nvim-lua/plenary.nvim'	  -- Useful Lua functions used by a lot of plugins
+	use 'nvim-lua/popup.nvim'	    -- An implementation of the Popup API from vim in Neovim.
+  use 'morhetz/gruvbox'         -- Gruvbox colorscheme
+  use {                         -- Gruvbox-baby colorscheme
+    'luisiacc/gruvbox-baby', branch = 'main'
+  }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  -- TODO
+  -- Tab Structure
+  -- Tree
+  -- Git
+  -- Telescope
+  -- LSP
+  -- Java
+  -- Snippets
 
 	-- Automatically setup your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
