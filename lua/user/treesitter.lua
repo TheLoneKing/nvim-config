@@ -21,6 +21,7 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
+-- Folding Documentation at `:h fold-commands`
 -- To fold use `zf`. `zf{motion}` or `{Visual}zf` also works.{{{
 -- To unfold one layer on cursor, use `zd`.
 -- To unfold all the way on cursor, use `zD`.}}}
