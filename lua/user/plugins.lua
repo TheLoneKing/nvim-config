@@ -63,13 +63,10 @@ return packer.startup(function(use)
     'kyazdani42/nvim-tree.lua', -- File tree plugin
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
-  -- TODO
-  -- Tree
-  -- Git
-  -- Telescope
-  -- LSP
-  -- Java
-  -- Snippets
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+  }
 
 	-- Automatically setup your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
