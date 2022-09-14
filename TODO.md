@@ -1,8 +1,10 @@
 # TODO
-[ ] Treesitter
+
+[x] nvim-tree
+[x] Treesitter
 [ ] Comments
 [ ] Git
 [ ] Telescope
 [ ] LSP
-[ ] Java
+[ ] Java (nvim-jdtls)
 [ ] Snippets (luasnip?)
