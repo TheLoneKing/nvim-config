@@ -59,6 +59,10 @@ return packer.startup(function(use)
     tag = "v2.*",
     requires = 'kyazdani42/nvim-web-devicons'
   }
+  use {
+    'kyazdani42/nvim-tree.lua', -- File tree plugin
+    requires = { 'kyazdani42/nvim-web-devicons' }
+  }
   -- TODO
   -- Tree
   -- Git

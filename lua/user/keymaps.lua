@@ -42,6 +42,9 @@ keymap("n", "<S-TAB>", ":bprevious<CR>", silent_noremap)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", silent_noremap)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", silent_noremap)
 
+-- Nvim Tree Toggle (nvim-tree config is in tree.lua)
+keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", silent_noremap)
+
 -- Insert --
 -- Press jj or kk fast to exit insert mode 
 keymap("i", "jj", "<ESC>", silent_noremap)

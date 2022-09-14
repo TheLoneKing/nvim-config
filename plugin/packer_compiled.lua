@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/theloneking/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/theloneking/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
   ["nvim-web-devicons"] = {
     loaded = false,
     needs_bufread = false,
