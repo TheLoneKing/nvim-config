@@ -1,4 +1,4 @@
- local silent_noremap = { noremap = true, silent = true }
+local silent_noremap = { noremap = true, silent = true }
 local term_silent_opts = { silent = true }
 
 -- Shorten function name
@@ -64,8 +64,6 @@ keymap("v", "p", '"_dP', silent_noremap)
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", silent_noremap)
 keymap("x", "K", ":move '<-2<CR>gv-gv", silent_noremap)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", silent_noremap)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", silent_noremap)
 
 -- Terminal --
 -- Better terminal navigation
