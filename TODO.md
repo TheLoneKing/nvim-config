@@ -2,9 +2,11 @@
 
 [x] nvim-tree
 [x] Treesitter
-[ ] Comments
-[ ] Git
+[x] Comments
+[ ] Git (fugitive, git-signs)
 [ ] Telescope
+[ ] nvim-cmp
 [ ] LSP
+[ ] lsp-signature
 [ ] Java (nvim-jdtls)
 [ ] Snippets (luasnip?)
