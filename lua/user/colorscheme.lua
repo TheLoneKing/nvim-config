@@ -10,7 +10,7 @@ vim.g.gruvbox_baby_use_original_palette = false
 vim.g.gruvbox_baby_telescope_theme = 1
 
 -- Enable transparent mode
-vim.g.gruvbox_baby_transparent_mode = 0
+vim.g.gruvbox_baby_transparent_mode = 1
 --
 -- Grubox-baby End
 

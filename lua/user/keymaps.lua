@@ -24,7 +24,7 @@ keymap("n", "<C-j>", "<C-w>j", silent_noremap)
 keymap("n", "<C-k>", "<C-w>k", silent_noremap)
 keymap("n", "<C-l>", "<C-w>l", silent_noremap)
 
-keymap("n", "<leader>w", "<cmd>w<CR>", silent_noremap)
+keymap("n", "<leader>w", "<cmd>wa<CR>", silent_noremap)
 
 keymap("n", "<leader>h", "<cmd>noh<CR>", silent_noremap)
 
