@@ -134,6 +134,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/theloneking/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/theloneking/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   }
 }
 
