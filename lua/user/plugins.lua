@@ -67,7 +67,15 @@ return packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-  use 'numToStr/Comment.nvim'        -- To comment code
+
+  -- To comment code
+  use 'numToStr/Comment.nvim'
+  
+  -- Gitsigns
+  use {
+    'lewis6991/gitsigns.nvim',
+    tag = 'release'
+  }
 
 	-- Automatically setup your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
