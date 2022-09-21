@@ -80,6 +80,13 @@ return packer.startup(function(use)
   -- vim-fugitive - to commit and push
   use 'tpope/vim-fugitive'
 
+  -- Telescope
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
 	-- Automatically setup your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
