@@ -5,7 +5,8 @@
 [x] Comments
 [x] Git (fugitive, git-signs)
 [x] Telescope
-[ ] nvim-cmp
+[x] nvim-cmp
+[x] lsp-kind
 [ ] LSP
 [ ] lsp-signature
 [ ] Java (nvim-jdtls)
