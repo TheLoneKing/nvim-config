@@ -4,10 +4,10 @@
 [x] Treesitter
 [x] Comments
 [x] Git (fugitive, git-signs)
-[ ] Telescope
+[x] Telescope
 [ ] nvim-cmp
 [ ] LSP
 [ ] lsp-signature
 [ ] Java (nvim-jdtls)
-[ ] Snippets (luasnip?)
+[ ] Snippets (luasnip?) & integrate with nvim-cmp
 [ ] trouble.nvim
