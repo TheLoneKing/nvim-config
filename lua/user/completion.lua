@@ -16,11 +16,11 @@ cmp.setup {
     ['<C-Space>'] = cmp.mapping.complete(),
   },
   sources = cmp.config.sources {
-    { name = 'nvim_lua' },
     { name = 'nvim_lsp' },
-    { name = 'path' },
     -- { name = 'luasnip' },  -- Uncomment after installing luasnip
-    { name = 'buffer', keyword_length = 3 }
+    { name = 'path' },
+    { name = 'buffer', keyword_length = 3 },
+    { name = 'nvim_lua' }
   },
   -- Uncomment after installing luasnip
   -- snippet = {
@@ -32,11 +32,11 @@ cmp.setup {
     format = lspkind.cmp_format {
       with_text = true,
       menu = {
-        buffer = '[buf]',
         nvim_lsp = '[LSP]',
-        nvim_lua = '[api]',
+        luasnip = '[snip]',
+        buffer = '[buf]',
         path = '[path]',
-        luasnip = '[snip]'
+        nvim_lua = '[NVIM_LUA]'
       }
     }
   },
@@ -45,4 +45,3 @@ cmp.setup {
     ghost_text = true
   }
 }
-

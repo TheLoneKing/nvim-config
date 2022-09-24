@@ -94,7 +94,6 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'saadparwaiz1/cmp_luasnip'
-
   -- For use with nvim-cmp
   use 'onsails/lspkind.nvim'
 
