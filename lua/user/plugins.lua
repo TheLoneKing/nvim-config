@@ -42,7 +42,7 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
 	-- My plugins here
-	
+
 	use 'wbthomason/packer.nvim'	-- Have packer manage itself
 	use 'nvim-lua/plenary.nvim'	  -- Useful Lua functions used by a lot of plugins
 	use 'nvim-lua/popup.nvim'	    -- An implementation of the Popup API from vim in Neovim.
@@ -70,7 +70,7 @@ return packer.startup(function(use)
 
   -- To comment code
   use 'numToStr/Comment.nvim'
-  
+
   -- Gitsigns
   use {
     'lewis6991/gitsigns.nvim',
@@ -96,6 +96,10 @@ return packer.startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   -- For use with nvim-cmp
   use 'onsails/lspkind.nvim'
+
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
 
 	-- Automatically setup your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

@@ -7,7 +7,7 @@
 [x] Telescope
 [x] nvim-cmp
 [x] lsp-kind
-[ ] LSP
+[x] LSP
 [ ] lsp-signature
 [ ] Java (nvim-jdtls)
 [ ] Snippets (luasnip?) & integrate with nvim-cmp
