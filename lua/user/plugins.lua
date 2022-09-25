@@ -103,6 +103,9 @@ return packer.startup(function(use)
   use 'RRethy/vim-illuminate'             -- highlight references of the word under the cursor
   use 'mfussenegger/nvim-jdtls'           -- Java LSP Plugin
 
+  -- To speed up neovim startup
+  use 'lewis6991/impatient.nvim'
+
 	-- Automatically setup your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

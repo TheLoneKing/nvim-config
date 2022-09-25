@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/theloneking/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
     url = "https://github.com/luisiacc/gruvbox-baby"
   },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/home/theloneking/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/home/theloneking/.local/share/nvim/site/pack/packer/start/lspkind.nvim",

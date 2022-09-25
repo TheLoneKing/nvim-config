@@ -3,6 +3,7 @@ vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- Load the plugins
+require('impatient')
 require('user.plugins')
 require('user.keymaps')
 require('user.options')
