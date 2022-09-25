@@ -10,10 +10,10 @@
 [x] LSP
 [x] Java (nvim-jdtls)
 [x] impatient
-[ ] Snippets (luasnip?) & integrate with nvim-cmp
-[ ] trouble.nvim
+[x] Snippets (luasnip?) & integrate with nvim-cmp
 [ ] nvim-dap
 
 ## Optional:
 [ ] lsp-signature
 [ ] null-ls
+[ ] trouble.nvim

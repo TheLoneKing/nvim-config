@@ -18,3 +18,5 @@ nvim-jdtls requires at least JDK 17. So make sure you have installed JDK v17+.
 **To install eclipse.jdt.ls**
 For manual installation you can download precompiled binaries from the official downloads site (http://download.eclipse.org/jdtls/milestones/ for milestone releases) and extract the archive. Ensure that the PATH variable contains the bin directory of the extracted archive.
 
+After installing `eclipse.jdt.ls`, modify the parameters accordingly in the `java.lua` file in *ftplugin* directory.
+
