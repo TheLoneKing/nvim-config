@@ -103,6 +103,9 @@ return packer.startup(function(use)
   use 'RRethy/vim-illuminate'             -- highlight references of the word under the cursor
   use 'mfussenegger/nvim-jdtls'           -- Java LSP Plugin
 
+  -- Snippets
+  use 'L3MON4D3/LuaSnip'
+
   -- To speed up neovim startup
   use 'lewis6991/impatient.nvim'
 

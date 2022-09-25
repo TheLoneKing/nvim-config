@@ -17,17 +17,17 @@ cmp.setup {
   },
   sources = cmp.config.sources {
     { name = 'nvim_lsp' },
-    -- { name = 'luasnip' },  -- Uncomment after installing luasnip
+    { name = 'luasnip' },  -- Uncomment after installing luasnip
     { name = 'path' },
     { name = 'buffer', keyword_length = 3 },
     { name = 'nvim_lua' }
   },
   -- Uncomment after installing luasnip
-  -- snippet = {
-  --   expand = function(args)
-  --     require('luasnip').lsp_expand(args.body)
-  --   end
-  -- },
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end
+  },
   formatting = {
     format = lspkind.cmp_format {
       with_text = true,
