@@ -99,8 +99,9 @@ return packer.startup(function(use)
 
   -- LSP
   use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
-  use 'RRethy/vim-illuminate' -- highlight references of the word under the cursor
+  use 'williamboman/nvim-lsp-installer'   -- Provides automatic installs for several LSP 
+  use 'RRethy/vim-illuminate'             -- highlight references of the word under the cursor
+  use 'mfussenegger/nvim-jdtls'           -- Java LSP Plugin
 
 	-- Automatically setup your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
