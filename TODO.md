@@ -16,3 +16,4 @@
 ## Optional:
 [ ] lsp-signature
 [ ] null-ls
+[ ] impatient
