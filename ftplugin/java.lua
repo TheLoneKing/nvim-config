@@ -5,14 +5,17 @@ local eclipse_jdt_ls_install_dir = home_dir .. '/.local/share/eclipse.jdt.ls'
 local eclipse_jdt_ls_version = '1.6.400.v20210924-0641'
 
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
-local workspace_dir = home_dir .. '/.workspace/' .. project_name
+local workspace_dir = home_dir .. '/.eclipse-workspace/' .. project_name
 print('workspace_dir' .. workspace_dir)
 
 local on_attach = function(client, bufnr)
   require'jdtls.setup'.add_commands()
   -- require'jdtls'.setup_dap() -- Only if nvim-dap is installed
 
-  -- Mappings
+  -- Import LSP key-mappings
+  require('user.lsp.handlers').lsp_keymaps(bufnr)
+
+  -- JDTLS key-mappings
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local opts = { noremap=true, silent=true }
   buf_set_keymap("n", "<A-o>", "<Cmd>lua require'jdtls'.organize_imports()<CR>", opts)

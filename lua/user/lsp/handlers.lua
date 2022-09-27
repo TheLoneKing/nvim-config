@@ -58,7 +58,7 @@ end
 -- 	-- end
 -- end
 
-local function lsp_keymaps(bufnr)
+M.lsp_keymaps = function(bufnr)
 	local opts = { noremap = true, silent = true }
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -82,7 +82,7 @@ M.on_attach = function(client, bufnr)
 	if client.name == 'tsserver' then
 		client.resolved_capabilities.document_formatting = false
 	end
-	lsp_keymaps(bufnr)
+	M.lsp_keymaps(bufnr)
 	-- lsp_highlight_document(client)
 end
 
