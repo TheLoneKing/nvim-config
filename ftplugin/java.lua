@@ -25,12 +25,12 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("v", "crc", "<Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>", opts)
   buf_set_keymap("v", "crm", "<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>", opts)
 
+  -- Format the file before saving.
+  vim.api.nvim_command[[autocmd BufWritePre *.java lua vim.lsp.buf.formatting_seq_sync()]]
+
   -- For java debug (if using nvim-dap)
   -- buf_set_keymap("n", "<leader>df", "<Cmd>lua require'jdtls'.test_class()<CR>", opts)
   -- buf_set_keymap("n", "<leader>dn", "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", opts)
-
-  -- If formatting is enabled
-  -- buf_set_keymap("n", "<leader>cf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
   -- Highlight references
   vim.api.nvim_exec([[
@@ -43,6 +43,10 @@ local on_attach = function(client, bufnr)
       autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
     augroup END
   ]], false)
+
+  -- Set tab and indent width to 4 spaces.
+  vim.opt['shiftwidth'] = 4
+  vim.opt['tabstop'] = 4
 end
 
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
@@ -91,16 +95,24 @@ local config = {
   -- for a list of options
   settings = {
     java = {
-      signatureHelp = {
-        enabled = true
-      },
-      saveActions = {
-        organizeImports = true
-      },
+      signatureHelp = { enabled = true },
+      contentProvider = { preferred = 'fernflower' },
+      saveActions = { organizeImports = true },
       sources = {
         organizeImports = {
           starThreshold = 99,
           staticStarThreshold = 99
+        }
+      },
+      completion = {
+        favoriteStaticMembers = {
+          "org.hamcrest.MatcherAssert.assertThat",
+          "org.hamcrest.Matchers.*",
+          "org.hamcrest.CoreMatchers.*",
+          "org.junit.jupiter.api.Assertions.*",
+          "java.util.Objects.requireNonNull",
+          "java.util.Objects.requireNonNullElse",
+          "org.mockito.Mockito.*"
         }
       }
     }

@@ -14,6 +14,7 @@
 [ ] nvim-dap
 
 ## Optional:
+[x] Java formatter
 [ ] lsp-signature
 [ ] null-ls
 [ ] trouble.nvim
