@@ -25,7 +25,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("v", "crc", "<Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>", opts)
   buf_set_keymap("v", "crm", "<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>", opts)
 
-  -- Format the file before saving.
+  -- Format java files before saving.
   vim.api.nvim_command[[autocmd BufWritePre *.java lua vim.lsp.buf.formatting_seq_sync()]]
 
   -- For java debug (if using nvim-dap)
