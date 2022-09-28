@@ -8,7 +8,7 @@ end
 
 lualine.setup({
   options = {
-    theme = 'dracula',
+    theme = 'papercolor_light',
     section_separators = '',
     component_separators = ''
   }
