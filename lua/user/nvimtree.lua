@@ -12,9 +12,19 @@ require('nvim-tree').setup({
     group_empty = true,
     highlight_opened_files = 'all'
   },
-  -- filters = {
-  --   custom = { '^\\.git' }
-  -- },
+  filters = {
+    -- Don't show these files/folders in nvim-tree
+    custom = {
+      '^\\.git',
+      '^target$',
+      '^build$',
+      '^dist$',
+      '^.settings$',
+      '^.idea$',
+      '.classpath',
+      '.project'
+    }
+  },
   actions = {
     expand_all = {
       exclude = { '.git', 'target', 'build', 'dist' }
