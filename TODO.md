@@ -15,6 +15,7 @@
 
 ## Optional:
 [x] Java formatter
+[x] Startup page
 [ ] lsp-signature
 [ ] null-ls
 [ ] trouble.nvim

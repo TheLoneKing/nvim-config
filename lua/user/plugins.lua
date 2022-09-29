@@ -109,6 +109,15 @@ return packer.startup(function(use)
   -- To speed up neovim startup
   use 'lewis6991/impatient.nvim'
 
+  -- Startup page
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function ()
+      require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+  }
+
 	-- Automatically setup your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
