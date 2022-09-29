@@ -16,6 +16,8 @@
 ## Optional:
 [x] Java formatter
 [x] Startup page
+[ ] which-key
 [ ] lsp-signature
 [ ] null-ls
 [ ] trouble.nvim
+[ ] Pin the plugins on commits
