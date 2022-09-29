@@ -63,6 +63,10 @@ return packer.startup(function(use)
     'kyazdani42/nvim-tree.lua', -- File tree plugin
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
+
+  -- Line indent guide
+  use 'lukas-reineke/indent-blankline.nvim'
+
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
