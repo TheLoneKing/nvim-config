@@ -16,6 +16,7 @@
 ## Optional:
 [x] Java formatter
 [x] Startup page
+[ ] telescope-ui-select.nvim
 [ ] which-key
 [ ] lsp-signature
 [ ] null-ls
