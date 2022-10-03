@@ -11,11 +11,15 @@
 [x] Java (nvim-jdtls)
 [x] impatient
 [x] Snippets (luasnip?) & integrate with nvim-cmp
-[ ] nvim-dap
+[x] nvim-dap
+[ ] vscode-java-test
+[ ] nvim-dap-virtual-text
+[ ] nvim-dap-ui
 
 ## Optional:
 [x] Java formatter
 [x] Startup page
+[ ] nvim-dap-python
 [ ] telescope-ui-select.nvim
 [ ] which-key
 [ ] lsp-signature

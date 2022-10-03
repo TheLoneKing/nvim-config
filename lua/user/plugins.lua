@@ -107,6 +107,9 @@ return packer.startup(function(use)
   use 'RRethy/vim-illuminate'             -- highlight references of the word under the cursor
   use 'mfussenegger/nvim-jdtls'           -- Java LSP Plugin
 
+  -- Debug
+  use 'mfussenegger/nvim-dap'
+
   -- Snippets
   use 'L3MON4D3/LuaSnip'
 

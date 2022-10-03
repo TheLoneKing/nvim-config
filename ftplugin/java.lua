@@ -10,10 +10,17 @@ print('workspace_dir' .. workspace_dir)
 
 local on_attach = function(client, bufnr)
   require'jdtls.setup'.add_commands()
-  -- require'jdtls'.setup_dap() -- Only if nvim-dap is installed
+  -- Setup Debugging, only if nvim-dap is installed
+  -- With `hotcodereplace = 'auto' the debug adapter will try to apply code changes
+  -- you make during a debug session immediately.
+  -- Remove the option if you do not want that.
+  -- You can use the `JdtHotcodeReplace` command to trigger it manually
+  require'jdtls'.setup_dap({ hotcodereplace = 'auto' })
 
   -- Import LSP key-mappings
   require('user.lsp.handlers').lsp_keymaps(bufnr)
+  -- Import DAP key-mappings
+  require('user.dap').dap_keymaps(bufnr)
 
   -- JDTLS key-mappings
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -29,8 +36,8 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_command[[autocmd BufWritePre *.java lua vim.lsp.buf.formatting_seq_sync()]]
 
   -- For java debug (if using nvim-dap)
-  -- buf_set_keymap("n", "<leader>df", "<Cmd>lua require'jdtls'.test_class()<CR>", opts)
-  -- buf_set_keymap("n", "<leader>dn", "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", opts)
+  buf_set_keymap("n", "<leader>df", "<Cmd>lua require'jdtls'.test_class()<CR>", opts)
+  buf_set_keymap("n", "<leader>dn", "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", opts)
 
   -- Highlight references
   vim.api.nvim_exec([[
@@ -47,6 +54,8 @@ local on_attach = function(client, bufnr)
   -- Set tab and indent width to 4 spaces.
   vim.opt['shiftwidth'] = 4
   vim.opt['tabstop'] = 4
+  -- Discover the main classes
+  -- require('jdtls.dap').setup_dap_main_class_configs()  -- After installing vscode-java-test
 end
 
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
