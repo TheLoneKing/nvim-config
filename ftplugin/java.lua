@@ -25,7 +25,7 @@ local on_attach = function(client, bufnr)
   -- JDTLS key-mappings
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local opts = { noremap=true, silent=true }
-  buf_set_keymap("n", "<A-o>", "<Cmd>lua require'jdtls'.organize_imports()<CR>", opts)
+  buf_set_keymap("n", "<A-o>", "<Cmd>lua require('jdtls').organize_imports()<CR>", opts)
   buf_set_keymap("n", "crv", "<Cmd>lua require('jdtls').extract_variable()<CR>", opts)
   buf_set_keymap("v", "crv", "<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>", opts)
   buf_set_keymap("n", "crc", "<Cmd>lua require('jdtls').extract_constant()<CR>", opts)

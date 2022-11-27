@@ -68,7 +68,7 @@ return packer.startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'
 
   use {
-    'nvim-treesitter/nvim-treesitter',
+    'nvim-treesitter/nvim-treesitter', commit = 'aebc6cf',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
 
@@ -109,6 +109,7 @@ return packer.startup(function(use)
 
   -- Debug
   use 'mfussenegger/nvim-dap'
+  use 'theHamsta/nvim-dap-virtual-text'
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
