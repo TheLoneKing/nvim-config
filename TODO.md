@@ -12,8 +12,8 @@
 [x] impatient
 [x] Snippets (luasnip?) & integrate with nvim-cmp
 [x] nvim-dap
+[x] nvim-dap-virtual-text
 [ ] vscode-java-test
-[ ] nvim-dap-virtual-text
 [ ] nvim-dap-ui
 
 ## Optional:
