@@ -13,7 +13,7 @@
 [x] Snippets (luasnip?) & integrate with nvim-cmp
 [x] nvim-dap
 [x] nvim-dap-virtual-text
-[ ] vscode-java-test
+[ ] Setup nvim-java (See: https://github.com/nvim-java/nvim-java)
 [ ] nvim-dap-ui
 
 ## Optional:
@@ -25,4 +25,5 @@
 [ ] lsp-signature
 [ ] null-ls
 [ ] trouble.nvim
+[ ] vscode-java-test (Ignore if able to run tests in java)
 [ ] Pin the plugins on commits
