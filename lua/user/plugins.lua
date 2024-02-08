@@ -48,24 +48,26 @@ return packer.startup(function(use)
 	use 'nvim-lua/popup.nvim'	    -- An implementation of the Popup API from vim in Neovim.
   use 'morhetz/gruvbox'         -- Gruvbox colorscheme
   use {                         -- Gruvbox-baby colorscheme
-    'luisiacc/gruvbox-baby', branch = 'main'
+    'luisiacc/gruvbox-baby', tag = '0.1.8'
   }
   use {
     'nvim-lualine/lualine.nvim',-- Lualine (Bottom status line)
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   use {                         -- Bufferline (Tabline)
     'akinsho/bufferline.nvim',
-    tag = "v2.*",
-    requires = 'kyazdani42/nvim-web-devicons'
+    tag = "v2.12.0",
+    requires = 'nvim-tree/nvim-web-devicons'
   }
   use {
-    'kyazdani42/nvim-tree.lua', -- File tree plugin
-    requires = { 'kyazdani42/nvim-web-devicons' }
+    'nvim-tree/nvim-tree.lua', tag = 'compat-nvim-0.7', -- File tree plugin
+    requires = { 'nvim-tree/nvim-web-devicons' }
   }
 
   -- Line indent guide
-  use 'lukas-reineke/indent-blankline.nvim'
+  use {
+    'lukas-reineke/indent-blankline.nvim', tag = 'v2.20.2'
+  }
 
   use {
     'nvim-treesitter/nvim-treesitter', commit = 'aebc6cf',
@@ -73,12 +75,13 @@ return packer.startup(function(use)
   }
 
   -- To comment code
-  use 'numToStr/Comment.nvim'
+  use {
+    'numToStr/Comment.nvim', tag = 'v0.7.0'
+  }
 
   -- Gitsigns
   use {
-    'lewis6991/gitsigns.nvim',
-    tag = 'release'
+    'lewis6991/gitsigns.nvim', tag = 'v0.5'
   }
 
   -- vim-fugitive - to commit and push
@@ -102,13 +105,17 @@ return packer.startup(function(use)
   use 'onsails/lspkind.nvim'
 
   -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'   -- Provides automatic installs for several LSP 
+  use {
+    'neovim/nvim-lspconfig', tag = 'v0.1.3'
+  }
+  use 'williamboman/nvim-lsp-installer'   -- Provides automatic installs for several LSP. TODO: Replace with Mason
   use 'RRethy/vim-illuminate'             -- highlight references of the word under the cursor
   use 'mfussenegger/nvim-jdtls'           -- Java LSP Plugin
 
   -- Debug
-  use 'mfussenegger/nvim-dap'
+  use {
+    'mfussenegger/nvim-dap', tag = '0.4.0'
+  }
   use 'theHamsta/nvim-dap-virtual-text'
 
   -- Snippets
@@ -120,7 +127,7 @@ return packer.startup(function(use)
   -- Startup page
   use {
     'goolord/alpha-nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
+    requires = { 'nvim-tree/nvim-web-devicons' },
     config = function ()
       require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
